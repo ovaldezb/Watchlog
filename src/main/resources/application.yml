@@ -1,0 +1,19 @@
+server:
+  port: 8090
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGO_USER}:${MONGO_PWD}@${MONGO_HOST}/medici?retryWrites=true&w=majority
+      database: watchlog
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,info,health
+  endpoint:
+    health:
+      show-details: always
+  security:
+    enabled: false

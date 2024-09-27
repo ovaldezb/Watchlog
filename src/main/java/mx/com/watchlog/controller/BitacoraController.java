@@ -21,7 +21,7 @@ public class BitacoraController {
     @Autowired
     BitacoraService bitacoraService;
 
-    @Operation(summary = "Get all bitacoras", description = "Get a list of all available bitacora")
+    @Operation(summary = "Get all bitacoras", description = "Get a list of all available bitacoras")
     @ApiResponses({
             @ApiResponse(responseCode = "302", content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode = "400", content = {@Content(mediaType = "application/json")})

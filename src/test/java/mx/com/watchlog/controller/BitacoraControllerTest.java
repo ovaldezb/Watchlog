@@ -27,15 +27,7 @@ public class BitacoraControllerTest {
     @InjectMocks
     BitacoraController bitacoraController;
 
-    Bitacora bitacora1 = Bitacora.builder()
-            .id("1")
-            .fecha(new Date())
-            .turno("matutino")
-            .horaIncidente("11:20")
-            .descripcion("incidente 1")
-            .tipoIncidente("vandalismo")
-            .informacionAdicional("n/a")
-            .build();
+
     BitacoraDTO bitacoraDTO1 = BitacoraDTO.builder()
             .id("1")
             .fecha(new Date())

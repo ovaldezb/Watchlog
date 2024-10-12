@@ -114,6 +114,7 @@ public class BitacoraServiceTest {
 
     @Test
     public void deleteByIdTest(){
+        when(bitacoraRepo.findById(any())).thenReturn(Optional.ofNullable(bitacora2));
         ResponseEntity<String > responseEntityResp = new ResponseEntity<>("Eliminado",HttpStatus.OK);
         ResponseEntity<String> stringResponseEntity = bitacoraService.deleteBitacora("1");
         verify(bitacoraRepo,times(1)).deleteById("1");

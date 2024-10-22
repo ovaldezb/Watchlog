@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/bitacora")
 @Tag(name = "Watch Log CRUD", description = "endpoints to perform CRUD operations")
+@CrossOrigin(origins = "*")
 public class BitacoraController {
     @Autowired
     BitacoraService bitacoraService;
